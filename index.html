@@ -818,8 +818,7 @@
                             <textarea id="message" name="message" rows="5" placeholder="Tell us about your automation needs and project requirements..."></textarea>
                         </div>
                          <input type="hidden" name="_captcha" value="false">
-                         <input type="hidden" name="_next" value="https://www.lavanyainfotechltd.com/thank-you.html">
-                        <button type="submit" class="cta-button" style="width: 100%; margin-top: 1rem;">Send Message</button>
+                         <button type="submit" class="cta-button" style="width: 100%; margin-top: 1rem;">Send</button>
                     </form>
                 </div>
                 <div class="contact-info">
@@ -886,10 +885,10 @@
         });
 
         // Form submission handler
-        // document.querySelector('form').addEventListener('submit', function(e) {
-        //     e.preventDefault();
-        //     alert('Thank you for your message! We will get back to you within 24 hours.');
-        // });
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you within 24 hours.');
+        });
 
         // Add active nav link highlighting
         window.addEventListener('scroll', function() {
