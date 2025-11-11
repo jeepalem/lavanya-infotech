@@ -1,0 +1,163 @@
+# Lavanya Infotech Limited - Git Ignore File
+
+# ===========================
+# Node Modules & Dependencies
+# ===========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+.pnpm-debug.log*
+
+# ===========================
+# Environment Variables
+# ===========================
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env*.local
+
+# ===========================
+# IDE & Editor Files
+# ===========================
+# Visual Studio Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# JetBrains IDEs (WebStorm, IntelliJ, etc.)
+.idea/
+*.iml
+*.iws
+.idea_modules/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+.#*
+
+# ===========================
+# Operating System Files
+# ===========================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ===========================
+# Build & Distribution
+# ===========================
+dist/
+build/
+out/
+*.min.js
+*.min.css
+*.map
+
+# ===========================
+# Logs
+# ===========================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# ===========================
+# Testing & Coverage
+# ===========================
+coverage/
+*.lcov
+.nyc_output/
+test-results/
+playwright-report/
+.playwright/
+
+# ===========================
+# Temporary Files
+# ===========================
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# ===========================
+# Security & Credentials
+# ===========================
+*.pem
+*.key
+*.cert
+credentials.json
+secrets.json
+config.local.js
+
+# ===========================
+# Cache & Runtime
+# ===========================
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.vercel/
+.netlify/
+
+# ===========================
+# Project Specific
+# ===========================
+# Keep favicon generation working directory clean
+# assets/icons/*.png
+# But we want to commit the actual favicons when generated
+
+# Backup files
+*.backup
+*.old
+
+# ===========================
+# Documentation Build
+# ===========================
+docs/_build/
+site/
+
+# ===========================
+# Misc
+# ===========================
+.sass-cache/
+connect.lock
+typings/
+.grunt
+bower_components

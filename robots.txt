@@ -1,0 +1,38 @@
+# Lavanya Infotech Limited - Robots.txt
+# www.lavanyainfotechltd.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.lavanyainfotechltd.com/sitemap.xml
+
+# Crawl delay (optional - adjust if needed)
+# Crawl-delay: 1
+
+# Disallow private directories (if any in future)
+# Disallow: /private/
+# Disallow: /admin/
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# Block bad bots (optional)
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10

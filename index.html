@@ -3,559 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lavanya Infotech Limited provides expert Test Automation, RPA, and process optimization solutions. Specializing in Playwright, Selenium, Automation Anywhere, and Blue Prism across government, financial, and enterprise sectors.">
+    <meta name="keywords" content="Test Automation, RPA, Robotic Process Automation, Playwright, Selenium, Automation Anywhere, Blue Prism, ETL Testing, Process Optimization, UK, Tunbridge Wells">
+    <meta name="author" content="Lavanya Infotech Limited">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.lavanyainfotechltd.com/">
+
+    <!-- Open Graph Meta Tags (Facebook, LinkedIn) -->
+    <meta property="og:title" content="Lavanya Infotech Limited - Test Automation & RPA Consulting">
+    <meta property="og:description" content="Transform your business processes with cutting-edge automation solutions. Expert Test Automation, RPA implementations, and process optimization.">
+    <meta property="og:image" content="https://www.lavanyainfotechltd.com/images/LavanyaInfotechLogo.png">
+    <meta property="og:url" content="https://www.lavanyainfotechltd.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Lavanya Infotech Limited">
+    <meta property="og:locale" content="en_GB">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lavanya Infotech Limited - Test Automation & RPA Consulting">
+    <meta name="twitter:description" content="Expert Test Automation, RPA, and process optimization solutions for enterprise success.">
+    <meta name="twitter:image" content="https://www.lavanyainfotechltd.com/images/LavanyaInfotechLogo.png">
+
+    <!-- Geographic Meta Tags -->
+    <meta name="geo.region" content="GB-KEN">
+    <meta name="geo.placename" content="Tunbridge Wells">
+    <meta name="geo.position" content="51.132633;0.263513">
+    <meta name="ICBM" content="51.132633, 0.263513">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#007BFF">
+
+    <!-- Resource Hints -->
+    <link rel="dns-prefetch" href="https://formspree.io">
+    <link rel="preconnect" href="https://formspree.io">
+
     <title>Lavanya Infotech Limited - Test Automation & RPA Consulting</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #111;
-            background: #ffffff;
-            min-height: 100vh;
-        }
-
-        /* Navigation */
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: #ffffff;
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            padding: 1rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #007BFF;
-            text-decoration: none;
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-menu a {
-            color: #111;
-            text-decoration: none;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-
-        .nav-menu a:hover {
-            color: #007BFF;
-        }
-
-        .nav-menu a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #64ffda;
-            transition: width 0.3s ease;
-        }
-
-        .nav-menu a:hover::after {
-            width: 100%;
-        }
-
-        /* Main Content */
-        .main-content {
-            margin-top: 80px;
-        }
-
-        .section {
-            padding: 4rem 0;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding-left: 2rem;
-            padding-right: 2rem;
-        }
-
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 8rem 0;
-            background: #f9f9f9;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #64ffda, #bb86fc);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: initial;
-            background-clip: text;
-        }
-
-        .hero .subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            color: #333;
-        }
-
-        .hero .bio {
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto 3rem;
-            color: #111;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #64ffda, #bb86fc);
-            color: #0f0f23;
-            padding: 1rem 2rem;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(100, 255, 218, 0.3);
-        }
-
-        /* Section Headers */
-        .section h2 {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 3rem;
-            color: #007BFF;
-            position: relative;
-        }
-
-        .section h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background: linear-gradient(135deg, #64ffda, #bb86fc);
-            border-radius: 2px;
-        }
-
-        /* About Section */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .about-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-
-        .about-text h3 {
-            color: #007BFF;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .skill-category {
-            background: #f5f5f5;
-            padding: 1.5rem;
-            border-radius: 10px;
-            border: 1px solid rgba(100, 255, 218, 0.2);
-            transition: transform 0.3s ease;
-        }
-
-        .skill-category:hover {
-            transform: translateY(-5px);
-            border-color: rgba(100, 255, 218, 0.4);
-        }
-
-        .skill-category h4 {
-            color: #007BFF;
-            margin-bottom: 0.5rem;
-        }
-
-        .skill-category ul {
-            list-style: none;
-        }
-
-        .skill-category li {
-            padding: 0.2rem 0;
-            color: #111;
-        }
-
-        /* Services Section */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .service-card {
-            background: #f5f5f5;
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            border: 1px solid rgba(100, 255, 218, 0.2);
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            border-color: rgba(100, 255, 218, 0.5);
-        }
-
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-
-        .service-card h3 {
-            color: #007BFF;
-            margin-bottom: 1rem;
-            font-size: 1.4rem;
-        }
-
-        .service-card ul {
-            list-style: none;
-            text-align: left;
-            margin-top: 1rem;
-        }
-
-        .service-card li {
-            padding: 0.3rem 0;
-            color: #111;
-            position: relative;
-            padding-left: 1rem;
-        }
-
-        .service-card li::before {
-            content: '▸';
-            position: absolute;
-            left: 0;
-            color: #007BFF;
-        }
-
-        /* Projects Section */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            background: #f5f5f5;
-            padding: 2rem;
-            border-radius: 15px;
-            border: 1px solid rgba(100, 255, 218, 0.2);
-            transition: transform 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .project-card h3 {
-            color: #007BFF;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin: 1rem 0;
-        }
-
-        .tag {
-            background: rgba(100, 255, 218, 0.2);
-            color: #007BFF;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-        }
-
-        .impact {
-            background: #f1f1f1;
-            padding: 1rem;
-            border-radius: 8px;
-            margin-top: 1rem;
-            border-left: 3px solid #bb86fc;
-        }
-
-        .impact h4 {
-            color: #007BFF;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Testimonials Section */
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .testimonial-card {
-            background: #f5f5f5;
-            padding: 2rem;
-            border-radius: 15px;
-            border: 1px solid rgba(187, 134, 252, 0.2);
-            position: relative;
-        }
-
-        .testimonial-card::before {
-            content: '"';
-            position: absolute;
-            top: -10px;
-            left: 20px;
-            font-size: 4rem;
-            color: #007BFF;
-            opacity: 0.5;
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .author-info h4 {
-            color: #007BFF;
-            margin-bottom: 0.2rem;
-        }
-
-        .author-info p {
-            color: #333;
-            font-size: 0.9rem;
-        }
-
-        /* Contact Section */
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-        }
-
-        .contact-form {
-            background: #f5f5f5;
-            padding: 2rem;
-            border-radius: 15px;
-            border: 1px solid rgba(100, 255, 218, 0.2);
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: #007BFF;
-            font-weight: 500;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.8rem;
-            background: #f8f8f8;
-            border: 1px solid rgba(100, 255, 218, 0.3);
-            border-radius: 8px;
-            color: #111;
-            font-size: 1rem;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #007BFF;
-            box-shadow: 0 0 10px rgba(100, 255, 218, 0.2);
-        }
-
-        .contact-info h3 {
-            color: #007BFF;
-            margin-bottom: 1.5rem;
-            font-size: 1.4rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1rem;
-            gap: 1rem;
-        }
-
-        .contact-item span {
-            font-size: 1.2rem;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .social-links a {
-            display: inline-block;
-            width: 50px;
-            height: 50px;
-            background: rgba(100, 255, 218, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #007BFF;
-            text-decoration: none;
-            transition: transform 0.3s ease, background 0.3s ease;
-            font-size: 1.5rem;
-        }
-
-        .social-links a:hover {
-            transform: translateY(-3px);
-            background: rgba(100, 255, 218, 0.2);
-        }
-
-        /* Footer */
-        .footer {
-            background: #f0f0f0;
-            text-align: center;
-            padding: 2rem 0;
-            border-top: 1px solid rgba(100, 255, 218, 0.2);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-menu {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero .subtitle {
-                font-size: 1.2rem;
-            }
-
-            .about-content,
-            .contact-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .section {
-                padding-left: 1rem;
-                padding-right: 1rem;
-            }
-
-            .section h2 {
-                font-size: 2rem;
-            }
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .section {
-            animation: fadeInUp 0.8s ease-out;
-        }
-
-        /* Scrollbar Styling */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #eaeaea;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(135deg, #64ffda, #bb86fc);
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(135deg, #bb86fc, #64ffda);
-        }
- html {
-    scroll-padding-top: 50px;
-  }
-
-  section {
-    scroll-margin-top: 50px;
-  }
-    </style>
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Lavanya Infotech Limited",
+      "description": "Expert Test Automation and RPA consulting services",
+      "url": "https://www.lavanyainfotechltd.com",
+      "logo": "https://www.lavanyainfotechltd.com/images/LavanyaInfotechLogo.png",
+      "image": "https://www.lavanyainfotechltd.com/images/LavanyaInfotechLogo.png",
+      "email": "info@lavanyainfotechltd.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "5 Bright Ridge",
+        "addressLocality": "Tunbridge Wells",
+        "postalCode": "TN4 0JN",
+        "addressCountry": "GB"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Subramanyam Reddy Jeepalem",
+        "jobTitle": "Director"
+      },
+      "areaServed": "GB",
+      "serviceType": [
+        "Test Automation",
+        "Robotic Process Automation",
+        "Process Optimization",
+        "ETL Testing",
+        "API Testing"
+      ],
+      "sameAs": []
+    }
+    </script>
 </head>
 <body>
+    <!-- Skip Navigation Link for Accessibility -->
+    <a href="#main-content" class="skip-navigation">Skip to main content</a>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
-             <a href="#home" class="logo">
-            <img src="LavanyaInfotechLogo.png" alt="Lavanya Infotech Logo" height="100" Width="400">
+            <a href="#home" class="logo" aria-label="Lavanya Infotech Limited Home">
+                <img src="images/LavanyaInfotechLogo.png" alt="Lavanya Infotech Limited Logo" height="60" width="auto">
             </a>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu" role="menubar">
+                <li role="none"><a href="#home" role="menuitem">Home</a></li>
+                <li role="none"><a href="#about" role="menuitem">About</a></li>
+                <li role="none"><a href="#services" role="menuitem">Services</a></li>
+                <li role="none"><a href="#projects" role="menuitem">Projects</a></li>
+                <li role="none"><a href="#testimonials" role="menuitem">Testimonials</a></li>
+                <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <main class="main-content">
+    <main id="main-content" class="main-content">
         <!-- Hero Section -->
-        <section id="home" class="hero">
-            <h1>Automate. Optimize. Excel.</h1>
+        <section id="home" class="hero" aria-labelledby="hero-heading">
+            <h1 id="hero-heading">Automate. Optimize. Excel.</h1>
             <p class="subtitle">Expert Test Automation & RPA Solutions</p>
             <div class="bio">
                 Transform your business processes with cutting-edge automation solutions. Specializing in Test Automation, 
@@ -781,7 +338,7 @@
             <div class="contact-content">
                 <div class="contact-form">
                     <h3 style="color: #007BFF">Ready to Automate Your Processes?</h3>
-                    <form action="https://formspree.io/f/xdkgrnvg" method="POST">
+                    <form action="https://formspree.io/f/xdkgrnvg" method="POST" aria-label="Contact form" novalidate>
                         <div class="form-group">
                             <label for="name">Full Name</label>
                             <input type="text" id="name" name="name" required>
@@ -843,57 +400,20 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="section">
             <p>&copy; 2025 Lavanya Infotech Limited. All rights reserved.</p>
             <p style="margin-top: 0.5rem; color: #333; font-size: 0.9rem;">
                 Director: Subramanyam Reddy Jeepalem | Registered in England & Wales
             </p>
+            <p style="margin-top: 0.5rem; color: #333; font-size: 0.9rem;">
+                <a href="privacy-policy.html">Privacy Policy</a> |
+                <a href="mailto:info@lavanyainfotechltd.com">Contact Us</a>
+            </p>
         </div>
     </footer>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // // Form submission handler
-        document.querySelector('form').addEventListener('submit', function(e) {
-        //     e.preventDefault();
-            alert('Thank you for your message! We will get back to you within 24 hours.');
-        });
-
-        // Add active nav link highlighting
-        window.addEventListener('scroll', function() {
-            const sections = document.querySelectorAll('section[id]');
-            const navLinks = document.querySelectorAll('.nav-menu a');
-            
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 100;
-                const sectionHeight = section.clientHeight;
-                if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === '#' + current) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
+    <!-- External JavaScript -->
+    <script src="js/main.js"></script>
 </body>
 </html>

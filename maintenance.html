@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Site Maintenance | Lavanya Infotech Limited</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Animated background particles */
+        .particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float linear infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .maintenance-container {
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 4rem 3rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .logo-container {
+            margin-bottom: 2rem;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .logo {
+            max-width: 300px;
+            height: auto;
+            filter: brightness(0) invert(1);
+            opacity: 0.9;
+        }
+
+        .maintenance-icon {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #64ffda, #bb86fc);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            animation: rotate 3s linear infinite;
+        }
+
+        .maintenance-icon::before {
+            content: '⚙️';
+            font-size: 4rem;
+            animation: rotate-reverse 3s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes rotate-reverse {
+            from { transform: rotate(360deg); }
+            to { transform: rotate(0deg); }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #64ffda, #bb86fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .info-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 4px solid #64ffda;
+        }
+
+        .info-box h2 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #64ffda;
+        }
+
+        .info-box p {
+            margin-bottom: 0.5rem;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .countdown-item {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 1.5rem;
+            border-radius: 15px;
+            min-width: 100px;
+            backdrop-filter: blur(5px);
+        }
+
+        .countdown-value {
+            font-size: 3rem;
+            font-weight: bold;
+            display: block;
+            background: linear-gradient(135deg, #64ffda, #bb86fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .countdown-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 0.5rem;
+        }
+
+        .contact-info {
+            margin: 2.5rem 0;
+            padding: 1.5rem;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #64ffda;
+        }
+
+        .contact-item {
+            margin: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .contact-item a {
+            color: #64ffda;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: #bb86fc;
+            text-decoration: underline;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 3px;
+            overflow: hidden;
+            margin: 2rem 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #64ffda, #bb86fc);
+            border-radius: 3px;
+            animation: progress 2s ease-in-out infinite;
+        }
+
+        @keyframes progress {
+            0% { width: 0%; }
+            50% { width: 70%; }
+            100% { width: 100%; }
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .maintenance-container {
+                padding: 3rem 2rem;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .maintenance-icon {
+                width: 100px;
+                height: 100px;
+            }
+
+            .maintenance-icon::before {
+                font-size: 3rem;
+            }
+
+            .countdown {
+                gap: 1rem;
+            }
+
+            .countdown-item {
+                min-width: 80px;
+                padding: 1rem;
+            }
+
+            .countdown-value {
+                font-size: 2.5rem;
+            }
+
+            .logo {
+                max-width: 200px;
+            }
+        }
+
+        /* Auto-refresh notification */
+        .refresh-notice {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: rgba(0, 0, 0, 0.8);
+            color: #64ffda;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            z-index: 1000;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated background particles -->
+    <div class="particles" id="particles"></div>
+
+    <div class="maintenance-container">
+        <!-- Logo -->
+        <div class="logo-container">
+            <img src="images/LavanyaInfotechLogo.png" alt="Lavanya Infotech Limited" class="logo">
+        </div>
+
+        <!-- Maintenance Icon -->
+        <div class="maintenance-icon"></div>
+
+        <h1>We'll Be Back Soon!</h1>
+        <p class="subtitle">Site Under Scheduled Maintenance</p>
+
+        <p>We're currently performing scheduled maintenance and upgrades to improve your experience. Our website will be back online shortly.</p>
+
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+
+        <!-- Countdown Timer (Optional - uncomment to use) -->
+        <!-- <div class="countdown" id="countdown">
+            <div class="countdown-item">
+                <span class="countdown-value" id="hours">00</span>
+                <span class="countdown-label">Hours</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-value" id="minutes">00</span>
+                <span class="countdown-label">Minutes</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-value" id="seconds">00</span>
+                <span class="countdown-label">Seconds</span>
+            </div>
+        </div> -->
+
+        <div class="info-box">
+            <h2>What's Happening?</h2>
+            <p>✨ Performance improvements and optimizations</p>
+            <p>🔧 System updates and security patches</p>
+            <p>🚀 New features and enhancements</p>
+            <p>🛡️ Infrastructure upgrades</p>
+        </div>
+
+        <div class="contact-info">
+            <h3>Need Immediate Assistance?</h3>
+            <div class="contact-item">
+                <span>📧</span>
+                <span>Email: <a href="mailto:info@lavanyainfotechltd.com">info@lavanyainfotechltd.com</a></span>
+            </div>
+            <div class="contact-item">
+                <span>🌐</span>
+                <span>We appreciate your patience</span>
+            </div>
+        </div>
+
+        <p style="font-size: 0.95rem; opacity: 0.8; margin-top: 2rem;">
+            This page will automatically refresh when the site is back online.
+        </p>
+
+        <!-- Social Links (Optional) -->
+        <!-- <div class="social-links">
+            <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+            <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+        </div> -->
+    </div>
+
+    <!-- Auto-refresh notification -->
+    <div class="refresh-notice">
+        ⟳ Auto-refreshing every 60 seconds
+    </div>
+
+    <script>
+        // ===========================
+        // Create animated particles
+        // ===========================
+        const particlesContainer = document.getElementById('particles');
+        const particleCount = 30;
+
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+
+            const size = Math.random() * 5 + 2;
+            particle.style.width = size + 'px';
+            particle.style.height = size + 'px';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+            particle.style.animationDelay = Math.random() * 5 + 's';
+
+            particlesContainer.appendChild(particle);
+        }
+
+        // ===========================
+        // Auto-refresh functionality
+        // ===========================
+        const AUTO_REFRESH_INTERVAL = 60000; // 60 seconds
+
+        function checkSiteStatus() {
+            // Try to fetch index.html to check if site is back online
+            fetch('index.html', { method: 'HEAD', cache: 'no-cache' })
+                .then(response => {
+                    if (response.ok) {
+                        // Site is back online, redirect to homepage
+                        console.log('Site is back online! Redirecting...');
+                        window.location.href = 'index.html';
+                    }
+                })
+                .catch(error => {
+                    // Still in maintenance mode
+                    console.log('Still in maintenance mode...');
+                });
+        }
+
+        // Check status every 60 seconds
+        setInterval(checkSiteStatus, AUTO_REFRESH_INTERVAL);
+
+        // ===========================
+        // Countdown Timer (Optional)
+        // ===========================
+        // Uncomment to enable countdown timer
+        /*
+        // Set the maintenance end time (24 hours from now as example)
+        const maintenanceEndTime = new Date().getTime() + (24 * 60 * 60 * 1000);
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = maintenanceEndTime - now;
+
+            if (distance < 0) {
+                // Maintenance period ended, check if site is back
+                checkSiteStatus();
+                return;
+            }
+
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+        }
+
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call
+        */
+
+        // ===========================
+        // Log maintenance page load
+        // ===========================
+        console.log('Maintenance page loaded');
+        console.log('Auto-refresh enabled: Checking every', AUTO_REFRESH_INTERVAL / 1000, 'seconds');
+    </script>
+</body>
+</html>

@@ -1,66 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Thank You | Lavanya Infotech</title>
-  <style>
-    body {
-      background: linear-gradient(135deg, #0f0f23, #1a1a2e);
-      color: #e0e0e0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      text-align: center;
-      padding: 2rem;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Thank You | Lavanya Infotech Limited</title>
 
-    .message-box {
-      background: rgba(255, 255, 255, 0.05);
-      padding: 3rem;
-      border-radius: 20px;
-      border: 1px solid rgba(100, 255, 218, 0.2);
-      max-width: 600px;
-      box-shadow: 0 0 20px rgba(100, 255, 218, 0.1);
-    }
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
 
-    h1 {
-      color: #64ffda;
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    p {
-      color: #c0c0c0;
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
-    }
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            text-align: center;
+            padding: 2rem;
+        }
 
-    a {
-      display: inline-block;
-      text-decoration: none;
-      background: linear-gradient(135deg, #64ffda, #bb86fc);
-      color: #0f0f23;
-      padding: 0.75rem 2rem;
-      border-radius: 50px;
-      font-weight: bold;
-      transition: all 0.3s ease;
-    }
+        .thank-you-container {
+            max-width: 700px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 4rem 3rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
 
-    a:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(100, 255, 218, 0.2);
-    }
-  </style>
+        .success-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #64ffda, #bb86fc);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            animation: scaleIn 0.6s ease-out;
+        }
+
+        .success-icon::before {
+            content: '✓';
+            font-size: 3.5rem;
+            color: #0f0f23;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #64ffda, #bb86fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+            line-height: 1.8;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .details {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 4px solid #64ffda;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        .details h2 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #64ffda;
+        }
+
+        .details ul {
+            list-style: none;
+            text-align: left;
+        }
+
+        .details li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .details li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #bb86fc;
+            font-weight: bold;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2.5rem;
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #64ffda, #bb86fc);
+            border: none;
+            color: #0f0f23;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #bb86fc, #64ffda);
+        }
+
+        .social-proof {
+            margin-top: 2rem;
+            font-size: 0.95rem;
+            opacity: 0.8;
+            animation: fadeInUp 0.8s ease-out 0.8s both;
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .thank-you-container {
+                padding: 3rem 2rem;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .success-icon {
+                width: 80px;
+                height: 80px;
+            }
+
+            .success-icon::before {
+                font-size: 2.5rem;
+            }
+
+            .button-group {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="message-box">
-    <h1>Thank You!</h1>
-    <p>Your message has been received. We'll get back to you within 24 hours.</p>
-    <a href="index.html">Return to Home</a>
-  </div>
+    <div class="thank-you-container">
+        <div class="success-icon"></div>
+
+        <h1>Thank You!</h1>
+
+        <p>Your message has been successfully received. We truly appreciate you taking the time to reach out to Lavanya Infotech Limited.</p>
+
+        <div class="details">
+            <h2>What Happens Next?</h2>
+            <ul>
+                <li>We'll review your inquiry within 2-4 business hours</li>
+                <li>A member of our team will respond within 24 hours</li>
+                <li>We'll schedule a consultation if needed</li>
+                <li>Check your email (including spam folder) for our response</li>
+            </ul>
+        </div>
+
+        <p>In the meantime, feel free to explore our services and case studies to learn more about how we can help automate and optimize your business processes.</p>
+
+        <div class="button-group">
+            <a href="index.html" class="btn btn-primary">Return Home</a>
+            <a href="index.html#services" class="btn">View Services</a>
+            <a href="index.html#projects" class="btn">Case Studies</a>
+        </div>
+
+        <div class="social-proof">
+            <p>📧 Email Confirmation Sent<br>
+            You should receive a copy of your message in your inbox shortly.</p>
+        </div>
+    </div>
+
+    <script>
+        // Track successful form submission (for analytics when implemented)
+        console.log('Form submission successful - Thank you page loaded');
+
+        // Optional: Track with Google Analytics when added
+        // if (typeof gtag !== 'undefined') {
+        //     gtag('event', 'form_submission', {
+        //         'event_category': 'Contact',
+        //         'event_label': 'Contact Form Submitted'
+        //     });
+        // }
+    </script>
 </body>
 </html>

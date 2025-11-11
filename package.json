@@ -1,0 +1,63 @@
+{
+  "name": "lavanya-infotech-website",
+  "version": "2.0.0",
+  "description": "Professional website for Lavanya Infotech Limited - Expert Test Automation and RPA consulting services",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8080 -o",
+    "serve": "npx http-server -p 8080",
+    "validate:html": "npx html-validator-cli index.html thank-you.html privacy-policy.html 404.html",
+    "validate:css": "npx stylelint \"css/**/*.css\"",
+    "validate:js": "npx eslint \"js/**/*.js\"",
+    "validate:all": "npm run validate:html && npm run validate:css && npm run validate:js",
+    "format:css": "npx prettier --write \"css/**/*.css\"",
+    "format:js": "npx prettier --write \"js/**/*.js\"",
+    "format:html": "npx prettier --write \"*.html\"",
+    "format:all": "npm run format:html && npm run format:css && npm run format:js",
+    "lint:fix": "npx eslint \"js/**/*.js\" --fix && npx stylelint \"css/**/*.css\" --fix",
+    "test:links": "npx linkinator . --recurse --skip node_modules",
+    "test:lighthouse": "npx lighthouse https://www.lavanyainfotechltd.com --view",
+    "optimize:images": "echo 'Manual image optimization recommended. Use: https://tinypng.com or https://squoosh.app'",
+    "deploy:preview": "echo 'Preview deployment - ensure all changes are committed'",
+    "deploy:production": "echo 'Production deployment - run from main branch only'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/lavanya-infotech.git"
+  },
+  "keywords": [
+    "test-automation",
+    "rpa",
+    "robotic-process-automation",
+    "playwright",
+    "selenium",
+    "automation-anywhere",
+    "blue-prism",
+    "consulting",
+    "etl-testing",
+    "process-optimization"
+  ],
+  "author": {
+    "name": "Lavanya Infotech Limited",
+    "email": "info@lavanyainfotechltd.com",
+    "url": "https://www.lavanyainfotechltd.com"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "homepage": "https://www.lavanyainfotechltd.com",
+  "bugs": {
+    "url": "https://github.com/yourusername/lavanya-infotech/issues",
+    "email": "info@lavanyainfotechltd.com"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
+}
